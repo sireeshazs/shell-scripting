@@ -14,7 +14,10 @@ Head "Installing Npm"
 apt install npm -y &>>$LOG
 Stat $?
 
-DOWNLOAD_COMPONENTS
+Head "Change The Path"
+cd /var/www/html && cd /etc/nginx/sites-available/default 
+stat $?
+
 
 
 
