@@ -18,6 +18,9 @@ Head "Change The Path"
 cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/frontend|g' default 
 Stat $?
 
+DOWNLOAD_COMPONENT
+
+
 
 
 
