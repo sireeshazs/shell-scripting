@@ -15,7 +15,7 @@ apt install npm -y &>>$LOG
 Stat $?
 
 Head "Change The Path"
-sed -i 's|/var/www/html|/var/www/html/frontend|g' default && /etc/nginx/sites-available
+sed -i 's#/path/to/shell-script#/path/to/etc/nginx/sites-available#g' && sed -i 's|/var/www/html|/var/www/html/frontend|g' default
 Stat $?
 
 
