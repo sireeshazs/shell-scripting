@@ -28,6 +28,6 @@ ERROR() {
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  git clone https://github.com/sireeshazs/shell-scripting.git
+  git clone https://github.com/sireeshazs/${COMPONENT}.git
   Stat $?
 }
