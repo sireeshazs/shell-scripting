@@ -8,7 +8,7 @@ rm -f $LOG
 
 source Components/common.sh
 
-if [! -f components/${COMPONENT}.sh ]; then
+if [! -f Components/${COMPONENT}.sh ]; then
     ERROR "Invaild Component Name is Provided"
     exit 1
 fi
@@ -16,7 +16,7 @@ fi
 USER_NAME=$(whoami)
 
 if [ "${USER_NAME}" != "root" ]; then
-    ERROR "You Shoul be a root user to perform this script, Try with sudo"
+    ERROR "You Should be a root user to perform this script, Try with sudo"
     exit 1
 fi
 
