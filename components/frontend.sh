@@ -15,7 +15,7 @@ apt install npm -y &>>$LOG
 Stat $?
 
 Head "Change The Path"
-sed -i 's#/path/to/shell-script#/path/to/etc/nginx/sites-available#g' 
+cd /etc/nginx/sites-available
 Stat $?
 
 
