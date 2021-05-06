@@ -20,6 +20,10 @@ Stat $?
 
 DOWNLOAD_COMPONENT
 
+Head "Restart Nginx Service"
+systemctl restart nginx
+Stat $?
+
 
 
 
