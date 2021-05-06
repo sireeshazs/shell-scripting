@@ -6,9 +6,9 @@ COMPONENT=$1
 export LOG=/tmp/${COMPONENT}.log
 rm -f $LOG
 
-source Components/common.sh
+source components/common.sh
 
-if [! -f Components/${COMPONENT}.sh ]; then
+if [! -f components/${COMPONENT}.sh ]; then
     ERROR "Invaild Component Name is Provided"
     exit 1
 fi
