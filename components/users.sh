@@ -18,6 +18,10 @@ DOWNLOAD_COMPONENT
 
 cd users
 
+Head "Build The Code"
+mvn clean package &>>$LOG
+Stat $?
+
 Head "Setup SystemD Service"
 mv systemd.service /etc/systemd/system/users.service && systemctl daemon-reload && systemctl start users && systemctl enable login &>>$LOG
 Stat $?
