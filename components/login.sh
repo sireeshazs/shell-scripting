@@ -13,6 +13,5 @@ Stat $?
 DOWNLOAD_COMPONENT
 
 Head "Change The Path"
-cd login  export GOPATH=/go && go get && go build && ./login
+cd login  export GOPATH=/go &>>$LOG
 Stat $?
-
