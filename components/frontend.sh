@@ -24,9 +24,7 @@ Head "Restart Nginx Service"
 systemctl restart nginx
 Stat $?
 
-Head "Setup SystemD Service"
-cd /var/www/html/frontend && npm start && cd /shell-scripting &>>$LOG
-Stat $?
+
 
 
 
