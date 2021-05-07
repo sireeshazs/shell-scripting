@@ -12,6 +12,7 @@ Stat $?
 
 DOWNLOAD_COMPONENT
 
-Head "Setup SystemD Service"
-mv /systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start login && systemctl enable login &>>$LOG
+Head "Change The Path"
+cd login && exportexport GOPATH=/go && go get && go build && ./login
 Stat $?
+
