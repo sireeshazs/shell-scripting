@@ -10,6 +10,8 @@ Head "Installing Golang"
 apt install golang -y &>>$LOG
 Stat $?
 
+cd /home/ubuntu
+
 DOWNLOAD_COMPONENT
 
 Head "Change The Path"
