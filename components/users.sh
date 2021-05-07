@@ -19,5 +19,9 @@ Head "Extract Downloaded Archive"
 cd /home/ubuntu && rm -rf users && unzip -o /tmp/users.zip &>>$LOG && mv users-main users  && cd users && mvn clean install
 Stat $?
 
+Head "Setup SystemD Service"
+mv /home/ubuntu/users/systemd.service /etc/systemd/system/users.service && systemctl daemon-reload && systemctl start users && systemctl enable users &>>$LOG
+Stat $?
+
 
 
