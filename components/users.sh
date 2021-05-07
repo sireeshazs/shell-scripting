@@ -19,7 +19,7 @@ DOWNLOAD_COMPONENT
 cd users
 
 Head "Build The Code"
-mvn clean package &>>$LOG
+mvn clean &>>$LOG
 Stat $?
 
 Head "Setup SystemD Service"
