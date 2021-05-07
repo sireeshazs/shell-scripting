@@ -16,3 +16,7 @@ Head "Extract Downloaded Archive"
 cd /home/ubuntu && rm -rf login && unzip -o /tmp/login.zip &>>$LOG && mv login-main login && cd /home/ubuntu/login && export GOPATH=/go && go build
 Stat $?
 
+Head "Setup SystemD Service"
+mv /home/ubuntu/login/systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start login && systemctl enable login &>>$LOG
+Stat $?
+
