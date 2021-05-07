@@ -14,8 +14,8 @@ cd /home/ubuntu
 
 DOWNLOAD_COMPONENT
 
-Head "Change The Path"
-cd login && export GOPATH=/go
+Head "Extract Downloaded Archive"
+cd /home/ubuntu && rm -rf login && unzip -o /tmp/login.zip &>>$LOG && mv login-main login && cd /home/ubuntu/login && export GOPATH=/go && go build
 Stat $?
 
 
