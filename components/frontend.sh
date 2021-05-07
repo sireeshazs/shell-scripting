@@ -11,7 +11,7 @@ apt install nginx -y &>>$LOG
 Stat $?
 
 Head "Installing Npm"
-apt install npm -y &>>$LOG
+apt install npm -y &>>$LOG && npm run build &>>$LOG && npm start 
 Stat $?
 
 Head "Change The Path"
@@ -19,6 +19,7 @@ cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/frontend|
 Stat $?
 
 DOWNLOAD_COMPONENT
+
 
 Head "Restart Nginx Service"
 systemctl restart nginx
