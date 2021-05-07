@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source components/common.sh
-
+main
 DOMAIN="zsdevops01.online"
 
 OS_PREREQ
