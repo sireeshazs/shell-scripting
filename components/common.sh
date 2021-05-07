@@ -30,6 +30,6 @@ DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
   git clone https://github.com/sireeshazs/${COMPONENT}.git
   export LOG=/tmp/${COMPONENT}.log    
-  rm -f $LOG
+  rm -f $>>LOG
   Stat $?
 }
