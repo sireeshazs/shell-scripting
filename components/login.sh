@@ -15,7 +15,7 @@ cd /home/ubuntu
 DOWNLOAD_COMPONENT
 
 Head "Change The Path"
-cd login && export GOPATH=/go && go build
+cd /home/ubuntu/login &&  export GOPATH=/go && go build
 Stat $?
 
 
