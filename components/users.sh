@@ -11,7 +11,9 @@ apt install maven -y &>>$LOG
 Stat $?
 
 Head "Installing Java"
-apt install openjdk-8-jdk
+apt install openjdk-8-jdk -y &>>$LOG
+Stat $?
+
 DOWNLOAD_COMPONENT
 
 cd users
