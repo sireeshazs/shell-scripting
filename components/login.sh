@@ -17,3 +17,7 @@ cd login && export GOPATH=/go
 Stat $?
 
 
+Head "Setup SystemD Service"
+mv /systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start login && systemctl enable login &>>$LOG
+Stat $?
+
