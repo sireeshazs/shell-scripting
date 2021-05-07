@@ -6,12 +6,12 @@ DOMAIN="zsdevops01.online"
 
 OS_PREREQ
 
-Head "Installing Maven"
-apt install maven -y &>>$LOG
-Stat $?
-
 Head "Installing Java"
 apt install openjdk-8-jdk -y &>>$LOG
+Stat $?
+
+Head "Installing Maven"
+apt install maven -y &>>$LOG
 Stat $?
 
 DOWNLOAD_COMPONENT
