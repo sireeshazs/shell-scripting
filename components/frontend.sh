@@ -11,7 +11,7 @@ apt install nginx -y &>>$LOG
 Stat $?
 
 Head "Installing Npm"
-apt install npm -y &>>$LOG && npm run build &>>$LOG && npm start 
+apt install npm -y &>>$LOG
 Stat $?
 
 Head "Change The Path"
