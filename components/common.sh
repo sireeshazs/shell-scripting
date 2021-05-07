@@ -28,8 +28,6 @@ ERROR() {
 
 DOWNLOAD_COMPONENT() {
   Head "Downloading ${COMPONENT} Component"
-  git clone https://github.com/sireeshazs/${COMPONENT}.git
-  export LOG=/tmp/${COMPONENT}.log    
-  rm -f $>>LOG
+  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/sireeshazs/${COMPONENT}/archive/main.zip"
   Stat $?
 }
