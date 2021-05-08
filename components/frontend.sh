@@ -24,15 +24,6 @@ Head "Extract Downloaded Archive"
 cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm run build && npm install && npm start &>>$LOG
 Stat $?
 
-Head "Update EndPoints in Service File"
-sed -i -e "s/users_endpoint/users.venu6776.tk/" /home/ubuntu/login/systemd.service
-Stat $?
-
-Head "Setup SystemD Service"
-mv /home/ubuntu/frontend/systemd.service /etc/systemd/system/frontend.service && systemctl daemon-reload && systemctl start nginx && systemctl enable nginx &>>$LOG
-Stat $?
-
-
 Head "Restart Nginx Service"
 systemctl restart nginx
 Stat $?
