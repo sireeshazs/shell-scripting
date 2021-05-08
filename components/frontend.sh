@@ -24,6 +24,10 @@ Head "Extract Downloaded Archive"
 cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm build &>>$LOG
 Stat $?
 
+Head "Update EndPoints in Service File"
+sed -i -e "s/MONGO_DNSNAME/mongodb.zsdevops01.online/" /home/roboshop/catalogue/systemd.service
+Stat $?
+
 
 Head "Restart Nginx Service"
 systemctl restart nginx
