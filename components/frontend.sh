@@ -25,7 +25,7 @@ cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv f
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "/$comp/ s/localhost/${comp}.venu6776.tk/" /home/ubuntu/frontend/systemd.service
+sed -i -e "s/users_endpoint/users.venu6776.tk/" /home/ubuntu/login/systemd.service
 Stat $?
 
 
