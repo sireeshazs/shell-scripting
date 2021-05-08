@@ -21,7 +21,7 @@ Stat $?
 DOWNLOAD_COMPONENT
 
 Head "Extract Downloaded Archive"
-cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm build &>>$LOG && npm start &>>$LOG
+cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm build &>>$LOG
 Stat $?
 
 Head "Restart Nginx Service"
