@@ -15,19 +15,18 @@ apt install npm -y &>>$LOG
 Stat $?
 
 Head "Change The Path"
-cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/frontend|g' default 
+cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/frontend/dist|g' default 
 Stat $?
 
 DOWNLOAD_COMPONENT
 
 Head "Extract Downloaded Archive"
-cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm build 
+cd /home/ubuntu && rm -rf frontend && unzip -o /tmp/frontend.zip &>>$LOG && mv frontend-main frontend && cd /home/ubuntu/frontend && npm build && npm start &>>$LOG
 Stat $?
 
 Head "Restart Nginx Service"
 systemctl restart nginx
 Stat $?
-
 
 
 
