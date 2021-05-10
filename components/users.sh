@@ -21,7 +21,6 @@ Stat $?
 
 
 
-
 Head "Setup SystemD Service"
 mv /home/ubuntu/users/systemd.service /etc/systemd/system/users.service && systemctl daemon-reload && systemctl start users && systemctl enable users &>>$LOG
 Stat $?
