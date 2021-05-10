@@ -2,6 +2,8 @@
 
 source components/common.sh
 
+DOMAIN="sirizs.tk"
+
 OS_PREREQ
 
 Head "Installing Golang"
@@ -15,10 +17,9 @@ cd /home/ubuntu && rm -rf login && unzip -o /tmp/login.zip &>>$LOG && mv login-m
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/users_endpoint/users.sirizs.tk/" /home/ubuntu/frontend/systemd.service
+sed -i -e "s/users_endpoint/users.${DOMAIN}/" /home/ubuntu/frontend/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
 mv /home/ubuntu/login/systemd.service /etc/systemd/system/login.service && systemctl daemon-reload && systemctl start login && systemctl enable login &>>$LOG
 Stat $?
-
