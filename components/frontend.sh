@@ -35,7 +35,7 @@ Head "update frontend configuration"
 cd /var/www/html/vue/frontend  && sudo npm install --unsafe-perm sass sass-loader node-sass wepy-compiler-sass &>>$LOG && npm run build &>>$LOG 
 Stat $?
 
-head "Start Npm service"
+Head "Start Npm service"
 npm start 
 Stat $?
 
