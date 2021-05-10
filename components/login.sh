@@ -17,7 +17,7 @@ cd /home/ubuntu && rm -rf login && unzip -o /tmp/login.zip &>>$LOG && mv login-m
 Stat $?
 
 Head "Update EndPoints in Service File"
-sed -i -e "s/users_endpoint/users.${DOMAIN}/" /home/ubuntu/login/systemd.service
+sed -i -e "s/users_endpoint/user.${DOMAIN}/" /home/ubuntu/login/systemd.service
 Stat $?
 
 Head "Setup SystemD Service"
