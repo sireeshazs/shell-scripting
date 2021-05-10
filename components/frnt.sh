@@ -16,7 +16,7 @@ apt install npm -y &>>$LOG
 Stat $?
 
 if [ "${path}" = "var/www/html" ]; then
-  echo -e "\e[1;32m SUCCESS\e[0m" cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/vue/frontend/dist|g' default 
+  cd /etc/nginx/sites-available && sed -i 's|/var/www/html|/var/www/html/vue/frontend/dist|g' default 
   else
     echo -e "\e[1;31m FAILURE\e[0m"
   exit 1
