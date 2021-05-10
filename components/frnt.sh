@@ -15,8 +15,10 @@ Head "Installing Npm"
 apt install npm -y &>>$LOG
 Stat $?
 
-if [ "${Change The Path}" = "var/www/html" ]; then
-  success  "change the path as given below"
+if [ "${root}" = "var/www/html" ]; then
+  echo -e "\e[1;32m SUCCESS\e[0m"
+  else
+    echo -e "\e[1;31m FAILURE\e[0m"
   exit 1
 fi
 
