@@ -8,7 +8,6 @@ OS_PREREQ
 
 Head "Installing Nginx"
 apt install nginx -y &>>$LOG
-systemctl restart nginx
 Stat $?
 
 Head "Installing Npm"
