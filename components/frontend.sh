@@ -21,7 +21,7 @@ rm -rf /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
 Stat $?
 
 Head "Extract Downloaded Archive"
-cd /var/www/html & unzip -o /tmp/frontend.zip &>>$LOG && rm -rf frontend.zip && rm -rf frontend && mv frontend-main frontend && cd frontend
+cd /var/www/html && unzip -o /tmp/frontend.zip &>>$LOG && rm -rf frontend.zip && rm -rf frontend && mv frontend-main frontend && cd frontend
 Stat $?
 
 
