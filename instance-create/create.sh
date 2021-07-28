@@ -24,7 +24,7 @@ Instance_Create() {
   IPADDRESS=$(aws ec2 describe-instances     --filters Name=tag:Name,Values=${COMPONENT}   | jq .Reservations[].Instances[].PrivateIpAddress | grep -v null |xargs)
 
   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${IPADDRESS}/" record.json >/tmp/record.json
-  aws route53 change-resource-record-sets --hosted-zone-id Z082928723HHVBJ3JFZLS --change-batch file:///tmp/record.json
+  aws route53 change-resource-record-sets --hosted-zone-id Z09261642598PJU7YUFPI --change-batch file:///tmp/record.json
 }
 
 if [ "$1" == "all" ]; then
