@@ -2,7 +2,7 @@
 
 source components/common.sh
 
-DOMAIN="sirizs.tk"
+DOMAIN="sireeshazs.tk"
 
 OS_PREREQ
 
